@@ -31,13 +31,13 @@ function updateRate()
 function checkdata() {
     // Check if amount is a positive number
     let value = document.forms["calculatorForm"]["principal"].value;
+    
     if (value == "" || value <= 0) {
         alert("Enter a positive number");
         principal.focus();
         return false;
     }
-    else {
-        compute();
-    }  
+
+    return true;
 }
         
