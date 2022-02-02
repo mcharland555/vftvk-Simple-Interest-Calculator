@@ -9,35 +9,42 @@
         <div class="maindiv">
             <h1>Simple Interest Calculator</h1>
 
-            <div class="secdiv">
-                <!-- Amount -->
-                <p>Amount <input type="number"  id="principal"></p>
-                
-                <!-- Rate -->
-                <p>Rate <input onchange="updateRate()" type="range" id="rate" min=1 max=20 value=10.25>
-                <span id="rate_val">10.25%</span></p>
-
-                <!-- Years -->       
-                <p>No. of Years 
-                <select id="years">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select></p>
+            <!--Inputs container-->
+            <div class="contentdiv">
+                <!--Amount-->
+                <p>
+                    <label for="principal">Amount</label>
+                    <input type="number" id="principal">
+                </p>
+                <!--Rate-->
+                <p>
+                    <label for="rate">Rate</label>
+                    <input onchange="updateRate()" type="range" id="rate" min=1 max=20 value=10.25>
+                    <span id="rate_val">10.25%</span>
+                </p>
+                <!--Years-->
+                <p>
+                    <label for="years">No. of Years</label>
+                    <select id="years">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </p>
 
                 <!-- Button / result -->
                 <button onclick="compute()">Compute Interest</button>
                 <p id="result"></p>
             </div>
 
-            <footer>&#169; This Calculator belongs to Matthew Charland </footer>
+            <footer>&#169; This Calculator belongs to Matthew Charland</footer>
         </div>
     </body>
 </html>
