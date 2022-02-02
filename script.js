@@ -21,6 +21,11 @@ function compute()
     document.getElementById("result").innerHTML=resultString;
 }
 
+function resetResult(){
+    // Reset result string
+    document.getElementById("result").innerText = "";
+}
+
 function updateRate() 
 {
     // Update shown rate value
@@ -30,10 +35,13 @@ function updateRate()
 
 function checkdata() {
     // Check if amount is a positive number
-    let value = document.getElementById("principal").value;
+    var principalElement = document.getElementById("principal");
+    let value = principalElement.value;
 
     if (value == "" || value <= 0) {
         alert("Enter a positive number");
+        resetResult();
+        principalElement.value = "";
         principal.focus();
         return false;
     }
