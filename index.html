@@ -8,16 +8,15 @@
     <body>
         <div class="maindiv">
             <h1>Simple Interest Calculator</h1>
-
-            Amount 
-            <input type="number"  id="principal"><br/>
+            <!-- Amount -->
+            <p>Amount <input type="number"  id="principal"></p>
             
-            Rate 
-            <input onchange="updateRate()" type="range" id="rate" min=1 max=20 value=10.25>
-            <span id="rate_val">10.25%</span><br/>
-                  
-                      
-            No. of Years 
+            <!-- Rate -->
+            <p>Rate <input onchange="updateRate()" type="range" id="rate" min=1 max=20 value=10.25>
+            <span id="rate_val">10.25%</span></p>
+
+            <!-- Years -->       
+            <p>No. of Years 
             <select id="years">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -29,10 +28,11 @@
                 <option value="8">8</option>
                 <option value="9">9</option>
                 <option value="10">10</option>
-            </select><br/>                                              
+            </select></p>
 
-            <button onclick="compute()">Compute Interest</button><br/>
-            <span id="result"></span>
+            <!-- Button / result -->
+            <button onclick="compute()">Compute Interest</button>
+            <p id="result"></p>
                              
             <footer>&#169; This Calculator belongs to Matthew Charland </footer>
         </div>
