@@ -10,11 +10,11 @@
             <h1>Simple Interest Calculator</h1>
 
             <!--Inputs container-->
-            <div class="contentdiv">
+            <form name="calculatorForm" onsubmit="return validateForm()">
                 <!--Amount-->
                 <p>
                     <label for="principal">Amount</label>
-                    <input type="number" id="principal">
+                    <input type="number" id="principal" name="principal">
                 </p>
                 <!--Rate-->
                 <p>
@@ -40,9 +40,9 @@
                 </p>
 
                 <!-- Button / result -->
-                <button onclick="compute()">Compute Interest</button>
+                <input type="submit" value="Compute Interes">
                 <p id="result"></p>
-            </div>
+            </form>
 
             <footer>&#169; This Calculator belongs to Matthew Charland</footer>
         </div>
