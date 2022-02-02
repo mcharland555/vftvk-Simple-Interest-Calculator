@@ -21,8 +21,11 @@ function compute()
     document.getElementById("result").innerHTML=resultString;
 }
 
-function resetResult(){
-    // Reset result string
+function tryAgain(){
+    // Prepare form for next entry
+    alert("Enter a positive number");
+    document.getElementById("principal").value = "";
+    principal.focus();
     document.getElementById("result").innerText = "";
 }
 
@@ -35,14 +38,10 @@ function updateRate()
 
 function checkdata() {
     // Check if amount is a positive number
-    var principalElement = document.getElementById("principal");
-    let value = principalElement.value;
+    let value = document.getElementById("principal").value;
 
     if (value == "" || value <= 0) {
-        alert("Enter a positive number");
-        resetResult();
-        principalElement.value = "";
-        principal.focus();
+        tryAgain();
         return false;
     }
 
