@@ -8,39 +8,39 @@
     <body>
         <div class="maindiv">
             <h1>Simple Interest Calculator</h1>
+            <br>
 
             <!--Inputs container-->
-            <form name="calculatorForm" onsubmit="return validateForm()">
+            <form name="calculatorForm" action="javascript:script.compute()" onsubmit="return checkdata()">  
+
                 <!--Amount-->
-                <p>
-                    <label for="principal">Amount</label>
-                    <input type="number" id="principal" name="principal">
-                </p>
+                <label for="principal">Amount</label>
+                <input type="number" id="principal" name="principal"> 
+                <br>
+
                 <!--Rate-->
-                <p>
-                    <label for="rate">Rate</label>
-                    <input onchange="updateRate()" type="range" id="rate" min=1 max=20 value=10.25>
-                    <span id="rate_val">10.25%</span>
-                </p>
+                <label for="rate">Rate</label>
+                <input onchange="updateRate()" type="range" id="rate" name="rate" min=1 max=20 value=10.25>
+                <span id="rate_val">10.25%</span>
+
                 <!--Years-->
-                <p>
-                    <label for="years">No. of Years</label>
-                    <select id="years">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </p>
+                <label for="years">No. of Years</label>
+                <select id="years" name="years">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <br>
 
                 <!-- Button / result -->
-                <input type="submit" value="Compute Interes">
+                <input type="submit" value="Compute Interest">
                 <p id="result"></p>
             </form>
 
